@@ -35,8 +35,10 @@ int SumMN(int m, int n)
     else
     if (m > n)
     {
-        Console.WriteLine("Введите m < n");
-        return 0;
+        m=n;
+         m++;
+        res = m + SumMN(m, n);
+        return res;
     }
     else
     {

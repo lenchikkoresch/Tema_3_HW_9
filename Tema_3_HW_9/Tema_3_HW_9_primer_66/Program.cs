@@ -33,6 +33,12 @@ int SumMN(int m, int n)
     if (m == n)
         return 0;
     else
+    if (m > n)
+    {
+        Console.WriteLine("Введите m < n");
+        return 0;
+    }
+    else
     {
         m++;
         res = m + SumMN(m, n);
@@ -41,7 +47,7 @@ int SumMN(int m, int n)
 }
 
 Console.WriteLine();
-int m = GetNaturalNumber("Введите натуральное число m: "); 
+int m = GetNaturalNumber("Введите натуральное число m: ");
 Console.WriteLine();
 int n = GetNaturalNumber("Введите натуральное число n: ");
 
@@ -49,5 +55,6 @@ SumFromMToN(m, n);
 Console.WriteLine();
 void SumFromMToN(int m, int n)
 {
-    Console.Write(SumMN(m - 1, n));
+    Console.Write(SumMN(m-1 , n));
+
 }
